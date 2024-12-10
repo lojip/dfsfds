@@ -28,7 +28,7 @@ export default function QuizPage() {
 	useEffect(() => {
 		async function loadData() {
 			try {
-				const response = await fetch(`${fetchUrl}/collectionOnName?nameColl=profiles`);
+				const response = await fetch('/profiles.json');
 				if (!response.ok) return setPushNotFound(true);
 
 				const data = await response.json();
